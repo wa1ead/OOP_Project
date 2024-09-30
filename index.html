@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="cart.js" async></script>
+
+    <!-- Font Awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/0eb25e2a76.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>Welcome to our Shop</h1>
+    <div class="cart">
+      <div class="heading">
+        <h3>This is your cart items</h3>
+        <i class="fa-solid fa-cart-shopping fa-xl"></i>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>ITEM</th>
+            <th>PRICE</th>
+            <th>QUANTITY</th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody class="cart-items">
+          <tr class="cart-item">
+            <td class="item-infos">
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""
+              />
+              <h3>Item 1</h3>
+            </td>
+            <td class="item-price"><p>$200</p></td>
+            <td class="item-quantity">
+              <input type="number" name="number" value="1" min="1" />
+            </td>
+            <td class="item-actions">
+              <button class="love">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <button class="delete">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="cart-item">
+            <td class="item-infos">
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""
+              />
+              <h3>Item 2</h3>
+            </td>
+            <td class="item-price"><p>$150</p></td>
+            <td class="item-quantity">
+              <input type="number" name="number" value="1" min="1" />
+            </td>
+            <td class="item-actions">
+              <button class="love">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <button class="delete">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="cart-item">
+            <td class="item-infos">
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""
+              />
+              <h3>Item 3</h3>
+            </td>
+            <td class="item-price"><p>$300</p></td>
+            <td class="item-quantity">
+              <input type="number" name="number" value="1" min="1" />
+            </td>
+            <td class="item-actions">
+              <button class="love">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <button class="delete">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="cart-item">
+            <td class="item-infos">
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""
+              />
+              <h3>Item 4</h3>
+            </td>
+            <td class="item-price"><p>$250</p></td>
+            <td class="item-quantity">
+              <input type="number" name="number" value="1" min="1" />
+            </td>
+            <td class="item-actions">
+              <button class="love">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <button class="delete">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="cart-item">
+            <td class="item-infos">
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""
+              />
+              <h3>Item 5</h3>
+            </td>
+            <td class="item-price"><p>$400</p></td>
+            <td class="item-quantity">
+              <input type="number" name="number" value="1" min="1" />
+            </td>
+            <td class="item-actions">
+              <button class="love">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <button class="delete">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr class="cart-item">
+            <td class="item-infos">
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""
+              />
+              <h3>Item 6</h3>
+            </td>
+            <td class="item-price"><p>$450</p></td>
+            <td class="item-quantity">
+              <input type="number" name="number" value="1" min="1" />
+            </td>
+            <td class="item-actions">
+              <button class="love">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+              <button class="delete">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="2" scope="row">TOTAL</th>
+            <td class="total-price" colspan="2"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </body>
+</html>

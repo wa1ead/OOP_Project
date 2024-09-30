@@ -1,0 +1,124 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  border: solid 1px black;
+  border-radius: 2rem 0 0 0;
+  background-color: gray;
+  margin-left: 60%;
+}
+.heading {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-infos {
+  display: flex;
+}
+
+.item-quantity {
+  display: flex;
+}*/
+
+table {
+  width: 100%;
+}
+
+table thead th{
+  border-bottom: solid 1px white;
+  padding: 0.5rem 0;
+  font-size: large;
+  font-weight: 500;
+}
+
+table tbody td{
+  border-bottom: solid 1px white;
+  padding: 1rem;
+}
+
+table tfoot th, td{
+  padding-top: 2rem
+}
+
+table tfoot th{
+  text-align: left;
+  font-weight: 500;
+  font-size: large;
+}
+
+table tfoot td{
+  text-align: end;
+  font-size: medium;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.item-infos {
+  display: flex;
+  gap: 0.5rem;
+}
+
+img {
+  width: 4rem;
+  height: auto;
+  border-radius: 10px;
+  background-position: center;
+}
+
+h3{
+  font-size:larger;
+  font-weight: 400
+}
+
+p {
+  font-size: small;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+input{
+  width: 2rem;
+  font-weight: 700;
+  font-size: small;
+}
+
+button {
+  background-color: transparent;
+  border: solid 1px white;
+  border-radius: 20px;
+  width: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  align-self: center;
+}
+
+button:hover {
+  background-color: white;
+}
+
+.delete{
+  border: solid 1px red;
+}
+
+.delete:hover {
+  background-color: red;
+}
