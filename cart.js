@@ -11,12 +11,21 @@ function ready() {
   addToFavorites();
 }
 
+// Create object class for the product
+class Product {
+  constructor() {
+    this.id = id;
+    this.name = name;
+    this.price = price;
+  }
+}
+
 // Calculate the total price
 const calculateTotal = () => {
   var cartItem = document.getElementsByClassName("cart-item");
   var cartItemArray = Array.from(cartItem);
   // console.log(cartItemArray);
-  
+
   var total = 0;
 
   cartItemArray.forEach((item) => {
