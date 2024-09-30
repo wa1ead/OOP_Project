@@ -20,32 +20,41 @@ class Product {
   }
 }
 
-// Calculate the total price
-const calculateTotal = () => {
-  var cartItem = document.getElementsByClassName("cart-item");
-  var cartItemArray = Array.from(cartItem);
-  // console.log(cartItemArray);
+// Create object class for the shopping cart
+class Shopping{
+  constructor(){
+    this.product = product;
+    this.quantity = quantity;
+  }
 
-  var total = 0;
-
-  cartItemArray.forEach((item) => {
-    // console.log(item);
-
-    var priceElement = item.querySelector(".item-price p").textContent;
-    var price = Number(priceElement.replace("$", ""));
-    // console.log(price);
-
-    var quantityElement = item.querySelector(".item-quantity input");
-    var quantity = quantityElement.value;
-    // console.log(quantity);
-
-    // Calculate the total based on items price and quantity
-    total += price * quantity;
+  // Calculate the total price
+  const calculateTotal = () => {
+    var cartItem = document.getElementsByClassName("cart-item");
+    var cartItemArray = Array.from(cartItem);
+    // console.log(cartItemArray);
+  
+    var total = 0;
+  
+    cartItemArray.forEach((item) => {
+      // console.log(item);
+  
+      var priceElement = item.querySelector(".item-price p").textContent;
+      var price = Number(priceElement.replace("$", ""));
+      // console.log(price);
+  
+      var quantityElement = item.querySelector(".item-quantity input");
+      var quantity = quantityElement.value;
+      // console.log(quantity);
+  
+      // Calculate the total based on items price and quantity
+      total += price * quantity;
+      // console.log(total);
+    });
+    document.getElementsByClassName("total-price")[0].textContent = `$${total}`;
     // console.log(total);
-  });
-  document.getElementsByClassName("total-price")[0].textContent = `$${total}`;
-  // console.log(total);
-};
+  };
+}
+
 
 // Update the total when quantity changes
 const attachQuantityListeners = () => {
