@@ -21,28 +21,33 @@ class Product {
 }
 
 // Create object class for the shopping cart item
-class ShoppingCartItem{
-  constructor(product, quantity){
+class ShoppingCartItem {
+  constructor(product, quantity) {
     this.product = product;
     this.quantity = quantity;
   }
 
   //Calculate the total price of the item
-  getTotal(){
-    return this.product.price * this.quantity
+  getTotal() {
+    return this.product.price * this.quantity;
   }
 }
 
 //Create object class for the shopping cart
-class ShoppingCart{
-  constructor(){
+class ShoppingCart {
+  constructor() {
     this.items = [];
   }
 
   //Add item to shopping cart
-  addItems(){
-    const cartItem = new ShoppingCartItem(product, quantity)
-    this.items.push(cartItem)
+  addItems() {
+    const cartItem = new ShoppingCartItem(product, quantity);
+    this.items.push(cartItem);
+  }
+
+  //Remove item from shopping cart
+  removeItem(productId) {
+    this.items = this.items.filter((item) => item.product.id !== productId);
   }
 }
 
