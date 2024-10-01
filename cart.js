@@ -63,13 +63,15 @@ function ready() {
             </td>
             <td class="item-price"><p>$${item.getTotalPrice()}</p></td>
             <td class="item-quantity">
-              <input type="number" name="number" value="${item.quantity}" min="1" />
+              <input type="number" name="number" value="${
+                item.quantity
+              }" min="1" />
             </td>
             <td class="item-actions">
               <button class="love">
                 <i class="fa-regular fa-heart"></i>
               </button>
-              <button class="delete">
+              <button class="delete" onclick="removeItem(${item.product.id})">
                 <i class="fa-solid fa-trash"></i>
               </button>
             </td>
@@ -80,10 +82,14 @@ function ready() {
 
     //Calculate total price of all the cart items
     getTotalPrice() {
-      return this.items.reduce(
-        (total, item) => total + item.getTotalPrice(),
-        0
+      //Display total price on the HTML
+      var total = this.items.reduce(
+      (total, item) => total + item.getTotalPrice(),
+      0
       );
+      var totalElement = document.getElementsByClassName('total-price')[0]
+      totalElement.textContent = `$${total}`
+      console.log(total)
     }
   }
 
