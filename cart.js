@@ -13,48 +13,53 @@ function ready() {
 
 // Create object class for the product
 class Product {
-  constructor() {
+  constructor(id, name, price) {
     this.id = id;
     this.name = name;
     this.price = price;
   }
 }
 
-// Create object class for the shopping cart
-class Shopping{
-  constructor(){
+// Create object class for the shopping cart item
+class ShoppingCartItem{
+  constructor(product, quantity){
     this.product = product;
     this.quantity = quantity;
   }
 
-  // Calculate the total price
-  const calculateTotal = () => {
-    var cartItem = document.getElementsByClassName("cart-item");
-    var cartItemArray = Array.from(cartItem);
-    // console.log(cartItemArray);
-  
-    var total = 0;
-  
-    cartItemArray.forEach((item) => {
-      // console.log(item);
-  
-      var priceElement = item.querySelector(".item-price p").textContent;
-      var price = Number(priceElement.replace("$", ""));
-      // console.log(price);
-  
-      var quantityElement = item.querySelector(".item-quantity input");
-      var quantity = quantityElement.value;
-      // console.log(quantity);
-  
-      // Calculate the total based on items price and quantity
-      total += price * quantity;
-      // console.log(total);
-    });
-    document.getElementsByClassName("total-price")[0].textContent = `$${total}`;
-    // console.log(total);
-  };
+  //Calculate the total price of the item
+  getTotal(){
+    return this.product.price * this.quantity
+  }
+
 }
 
+// Calculate the total price
+const calculateTotal = () => {
+  var cartItem = document.getElementsByClassName("cart-item");
+  var cartItemArray = Array.from(cartItem);
+  // console.log(cartItemArray);
+
+  var total = 0;
+
+  cartItemArray.forEach((item) => {
+    // console.log(item);
+
+    var priceElement = item.querySelector(".item-price p").textContent;
+    var price = Number(priceElement.replace("$", ""));
+    // console.log(price);
+
+    var quantityElement = item.querySelector(".item-quantity input");
+    var quantity = quantityElement.value;
+    // console.log(quantity);
+
+    // Calculate the total based on items price and quantity
+    total += price * quantity;
+    // console.log(total);
+  });
+  document.getElementsByClassName("total-price")[0].textContent = `$${total}`;
+  // console.log(total);
+};
 
 // Update the total when quantity changes
 const attachQuantityListeners = () => {
