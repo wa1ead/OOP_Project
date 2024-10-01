@@ -28,7 +28,7 @@ class ShoppingCartItem {
   }
 
   //Calculate the total price of the item
-  getTotal() {
+  getTotalPrice() {
     return this.product.price * this.quantity;
   }
 }
@@ -48,6 +48,17 @@ class ShoppingCart {
   //Remove item from shopping cart
   removeItem(productId) {
     this.items = this.items.filter((item) => item.product.id !== productId);
+  }
+
+  //Display cart items
+  displayItems() {
+    return this.items.forEach((item) =>
+      console.log(
+        `${item.product.name} - Quantity: ${
+          item.quantity
+        } - Total: ${getTotalPrice()}`
+      )
+    );
   }
 }
 
