@@ -60,6 +60,11 @@ class ShoppingCart {
       )
     );
   }
+
+  //Calculate total price of all the cart items
+  getTotalPrice() {
+    return this.items.reduce((total, item) => total + item.getTotalPrice(), 0);
+  }
 }
 
 // Calculate the total price
