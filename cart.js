@@ -35,8 +35,15 @@ class ShoppingCartItem{
 
 //Create object class for the shopping cart
 class ShoppingCart{
-  const items = [];
-  
+  constructor(){
+    this.items = [];
+  }
+
+  //Add item to shopping cart
+  addItems(){
+    const cartItem = new ShoppingCartItem(product, quantity)
+    this.items.push(cartItem)
+  }
 }
 
 // Calculate the total price
