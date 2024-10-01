@@ -31,7 +31,12 @@ class ShoppingCartItem{
   getTotal(){
     return this.product.price * this.quantity
   }
+}
 
+//Create object class for the shopping cart
+class ShoppingCart{
+  const items = [];
+  
 }
 
 // Calculate the total price
