@@ -40,7 +40,7 @@ class ShoppingCart {
   }
 
   //Add item to shopping cart
-  addItems() {
+  addItems(product,quantity) {
     const cartItem = new ShoppingCartItem(product, quantity);
     this.items.push(cartItem);
   }
@@ -56,7 +56,7 @@ class ShoppingCart {
       console.log(
         `${item.product.name} - Quantity: ${
           item.quantity
-        } - Total: ${getTotalPrice()}`
+        } - Total: ${item.getTotalPrice()}`
       )
     );
   }
@@ -147,3 +147,28 @@ const addToFavorites = () => {
     });
   });
 };
+
+// Create products
+const product1 = new Product(1, "Laptop", 1000);
+const product2 = new Product(2, "Phone", 500);
+
+// Create a shopping cart
+const cart = new ShoppingCart();
+
+// Add items to the cart
+cart.addItems(product1, 1); // Add 1 laptop
+cart.addItems(product2, 2); // Add 2 phones
+
+// Display cart items
+console.log("Cart Items:");
+cart.displayItems();
+
+// Display total price of all items in the cart
+console.log("Total Price: $" + cart.getTotalPrice());
+
+// Remove the phone from the cart
+cart.removeItem(2);
+
+// Display cart after removal
+console.log("Cart Items after removal:");
+cart.displayItems();
